@@ -61,7 +61,8 @@
         if(token){
           const response = await axios.get('/api/auth', {
             headers: {
-              authorization: token
+              authorization: token,
+              foo: 'bar'
             }
           });
           this.setState({ auth: response.data });
